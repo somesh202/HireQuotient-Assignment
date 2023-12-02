@@ -35,12 +35,12 @@ const getUsers = (setUsers) => {
     toast.success("All users fetched")
   }, []);
   const search = (search, users) => {
-    let tempSearch = search.toLowerCase();
+    let query = search.toLowerCase();
     return users.map((user) => {
       if (
-        user.name.toLowerCase().includes(tempSearch) ||
-        user.email.toLowerCase().includes(tempSearch) ||
-        user.role.toLowerCase().includes(tempSearch)
+        user.name.toLowerCase().includes(query) ||
+        user.email.toLowerCase().includes(query) ||
+        user.role.toLowerCase().includes(query)
       ) {
          user.show = true;
          return user;
@@ -55,38 +55,38 @@ const getUsers = (setUsers) => {
   };
 
   const deleteUser = (id) => {
-    let tempUsers = users.filter((user) => user.id !== id);
-    setUsers(tempUsers);
+    let queryUsers = users.filter((user) => user.id !== id);
+    setUsers(queryUsers);
     setUpdate((prevState) => !prevState);
     toast.success("User deleted succesfully")
   };
 
   const editUser = (id) => {
-    let tempUsers = users;
-    const index = tempUsers.findIndex((user) => user.id === id);
-    tempUsers[index].edit = true;
-    setUsers(tempUsers);
+    let queryUsers = users;
+    const index = queryUsers.findIndex((user) => user.id === id);
+    queryUsers[index].edit = true;
+    setUsers(queryUsers);
     setUpdate((prevState) => !prevState);
   };
 
   const saveUser = (id, nameRef, emailRef, roleRef) => {
-    let tempUsers = users;
-    const index = tempUsers.findIndex((user) => user.id === id);
-    tempUsers[index].name = nameRef.current.value;
-    tempUsers[index].email = emailRef.current.value;
-    tempUsers[index].role = roleRef.current.value;
-    tempUsers[index].edit = false;
-    setUsers(tempUsers);
+    let queryUsers = users;
+    const index = queryUsers.findIndex((user) => user.id === id);
+    queryUsers[index].name = nameRef.current.value;
+    queryUsers[index].email = emailRef.current.value;
+    queryUsers[index].role = roleRef.current.value;
+    queryUsers[index].edit = false;
+    setUsers(queryUsers);
     setUpdate((prevState) => !prevState);
     
     toast.success("User updated succesfully")
   };
 
   const selectOne = (id) => {
-    let tempUsers = users;
-    const index = tempUsers.findIndex((user) => user.id === id);
-    tempUsers[index].selected = !tempUsers[index].selected;
-    setUsers(tempUsers);
+    let queryUsers = users;
+    const index = queryUsers.findIndex((user) => user.id === id);
+    queryUsers[index].selected = !queryUsers[index].selected;
+    setUsers(queryUsers);
     setUpdate((prevState) => !prevState);
   };
 
