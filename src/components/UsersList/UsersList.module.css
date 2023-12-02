@@ -1,0 +1,33 @@
+.table {
+    width: 80vw;
+    margin:auto;
+    height: 90vh;
+    border-collapse:collapse;
+    table-layout:fixed;
+    box-shadow: 0cqmax;
+}
+
+
+
+.table tr {
+    text-align: left;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    height: 10%;
+}
+
+.table th{
+    font-weight: bolder;
+    font-size: 1.0em;
+    color: rgb(77, 77, 77);
+    font-family:'Segoe UI', Tahoma;
+    padding: 4px 0 4px 0;
+}
+
+.table tbody {
+    font-weight: 100;
+}
+
+.table td {
+    padding: 2px 0 4px 0;
+}
+

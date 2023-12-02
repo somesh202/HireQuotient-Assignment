@@ -1,0 +1,47 @@
+.pagination {
+    display: flex;
+    justify-content: right;
+    margin-right: 100px;
+}
+
+.page {
+    color:rgb(48, 48, 48);
+    /* background-color:#2593fb; */
+    border-radius: 50%;
+    margin:10px;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+}
+
+
+.selected {
+    background-color: #787878;
+    color:rgb(255, 255, 255)
+}
+
+.delete {
+    margin-right:auto;
+    margin-left: 10vw;
+    background: #fc5373;
+    color:white;
+    position: absolute;
+    top: 8px;
+    right: 80px;
+    border-radius: 20px;
+    padding: 6px;
+    margin-top:80px;
+    cursor: pointer;
+    
+}
+
+.paginationContainer {
+    display: grid;
+    grid-template-rows: 1fr;
+}
+
+.disabled {
+    background: gray;
+    cursor:not-allowed;
+}
