@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from "react";
-
 import "./App.css";
 import Pagination from "./components/Pagination/Pagination";
 import UsersList from "./components/UsersList/UsersList";
